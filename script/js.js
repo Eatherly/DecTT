@@ -22,46 +22,47 @@ $(document).ready(function () {
 
 
 
- 
-    
 
-$(".btn").click(function () {
-        
-     let name =  $("#name").val();
-     let phone = $("#phone").val();
-     let email = $("#email").val();
-     let text =  $("#text").val();
-        
-      let a = new POST(name, phone , email, text) 
-      a.ajax_post();
-       if ($("#name").val('.', 0) == -1 || $("#name").val('@', 0) == -1) {
- 
-     alert("sddsdv") }
-      event.preventDefault();
-      $("#name").val(" ");
-      $("#phone").val(" ");
-      $("#email").val(" ");
-      $("#text").val("Ваша заявка успешно отправлена, мы с Вами свжемся в ближашее время.");
+
+
+    $(".btn").click(function () {
+
+        let name = $("#name").val();
+        let phone = $("#phone").val();
+        let email = $("#email").val();
+        let text = $("#text").val();
+
+        let a = new POST(name, phone, email, text)
+        a.ajax_post();
+        if ($("#name").val('.', 0) == -1 || $("#name").val('@', 0) == -1) {
+
+            alert("sddsdv")
+        }
+        event.preventDefault();
+        $("#name").val(" ");
+        $("#phone").val(" ");
+        $("#email").val(" ");
+        $("#text").val("Ваша заявка успешно отправлена, мы с Вами свжемся в ближашее время.");
     });
 
 
     class POST {
 
-    constructor(name, phone, email, text) {
-        this.name =  name;
-        this.phone = phone;
-        this.email = email;
-        this.text =  text;
+        constructor(name, phone, email, text) {
+            this.name = name;
+            this.phone = phone;
+            this.email = email;
+            this.text = text;
 
+        }
+        ajax_post() {
+            $.ajax({
+                type: "POST",
+                url: "post.php",
+                data: "name=" + this.name + "&phone=" + this.phone + "&email=" + this.email + "&text=" + this.text,
+
+            })
+        }
     }
-  ajax_post(){     
-  $.ajax({
-            type: "POST",
-            url: "post.php",
-            data: "name=" + this.name + "&phone=" + this.phone + "&email=" + this.email + "&text=" + this.text ,
-     
-        })
-  }
-}
-    
-    });
+
+});

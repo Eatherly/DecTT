@@ -1,15 +1,12 @@
 <?php
 
- if (isset($_POST)){
-     print_r($_POST);
+if (isset($_POST)) {
+    print_r($_POST);
 
 
     $returnContract = new POST($_POST[name], $_POST[phone], $_POST[email], $_POST[text]);
     $returnContract->sentUserData();
-    
- };
-
-
+};
 
 class POST {
 
@@ -31,15 +28,11 @@ class POST {
         if (mysqli_connect_errno())
             echo mysqli_connect_error();
 
-        $query = "INSERT INTO users (name, phone , email , text) VALUES ('".$this->name."' , '".$this->phone."' ,'".$this->email."' ,'".$this->text."' );";
-   
+        $query = "INSERT INTO users (name, phone , email , text) VALUES ('" . $this->name . "' , '" . $this->phone . "' ,'" . $this->email . "' ,'" . $this->text . "' );";
+
         $result = mysqli_query($connection, $query);
     }
 
 }
-
-
-
-
 
 ?>

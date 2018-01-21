@@ -1,0 +1,66 @@
+@media screen and (max-width: 640px) { 
+
+  .container {
+    width: 640px;
+    height: 1000px;
+margin: 0 auto;
+  }
+    header{
+        width: 495px;
+    }
+    .table{
+        width: 495px;
+    }
+    .wheat{
+        display: none;
+    }
+    turquoise{
+        position: absolute;
+        float: left;
+    }
+}
+tr{
+    border-collapse: collapse;
+}
+.stem{
+        position: absolute;
+    top: 175px;
+    left: 509px;
+}
+.statistic{
+    width: 668px;
+    height: 235px;
+}
+.aplication {
+    height: 450px;
+    width: 570px;
+   
+}
+
+.statistic span {
+    display: inline;
+    text-align: center;
+    
+    margin-top: 0px;
+}
+.per65 {
+    margin-left: 275px;
+}
+.task{
+  margin-left: 30px;
+}
+.form{
+    margin-left: 260px
+}
+.message {
+    float: right;
+    margin-right: -15px;
+    margin-top: 10px;
+}
+textarea { 
+    margin-right: 8px;
+}
+button{
+    margin-left: -260px;
+    margin-top: 110px;
+}

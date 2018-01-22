@@ -34,15 +34,12 @@ $(document).ready(function () {
 
         let a = new POST(name, phone, email, text)
         a.ajax_post();
-        if ($("#name").val('.', 0) == -1 || $("#name").val('@', 0) == -1) {
-
-            alert("sddsdv")
-        }
+        
         event.preventDefault();
         $("#name").val(" ");
         $("#phone").val(" ");
         $("#email").val(" ");
-        $("#text").val("Ваша заявка успешно отправлена, мы с Вами свжемся в ближашее время.");
+        $("#text").val("Ваша заявка успешно отправлена, мы с Вами свяжемся в ближашее время.");
     });
 
 
